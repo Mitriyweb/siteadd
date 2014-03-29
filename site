@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	Servername site_name
+
+	DocumentRoot /site_dir/site_name/www/
+	<Directory /site_dir/site_name/www/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog  /site_dir/site_name/error.log
+
+	LogLevel warn
+
+	CustomLog /site_dir/site_name/access.log combined
+</VirtualHost>

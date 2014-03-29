@@ -1,0 +1,39 @@
+
+All config in file config.sh
+
+To add graphics applications using the following commands. 
+Replacing% user% user name and% dir% on the directory name where files are stored.
+
+
+sudo apt-get install gksudo
+
+
+gedit ~/.local/share/applications/addsite.desktop
+
+[Desktop Entry]
+Name=AddSite
+GenericName=AddSite
+Comment=AddSite in the local
+Exec=gksudo bash /home/с/%dir%/gr_addsite.sh           
+Terminal=false
+Icon=/home/%user%/%dir%/add.png
+Type=Application
+Categories=
+Path=
+NoDisplay=false
+
+
+
+gedit ~/.local/share/applications/rmsite.desktop
+
+[Desktop Entry]
+Name=RmSite
+GenericName=RmSite
+Comment=RmSite in the local
+Exec=gksudo bash /home/%user%/%dir%/gr_rmsite.sh           
+Terminal=false
+Icon=/home/%user%/%dir%/rm.png
+Type=Application
+Categories=
+Path=
+NoDisplay=false
